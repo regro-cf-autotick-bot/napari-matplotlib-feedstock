@@ -29,6 +29,7 @@ test:
   imports:
     - napari_matplotlib
   commands:
+    - python -c "from napari_matplotlib._version import version;print(f'Version installed: {version}')"
     - pip list
     - pip check
   requires:

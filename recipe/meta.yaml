@@ -12,12 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools_scm
   run:
     - matplotlib-base
     - napari
@@ -28,6 +29,7 @@ test:
   imports:
     - napari_matplotlib
   commands:
+    - "python -c 'from napari_matplotlib import __version__;print(__version__)'"
     - pip list
     - pip check
   requires:

@@ -24,6 +24,7 @@ requirements:
     - napari
     - numpy
     - python >=3.8
+    - tinycss2
 
 test:
   imports:

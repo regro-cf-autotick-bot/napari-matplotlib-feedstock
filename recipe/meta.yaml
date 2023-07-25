@@ -18,12 +18,13 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools_scm
+    - setuptools-scm
   run:
     - matplotlib-base
     - napari
     - numpy
     - python >=3.8
+    - qtpy
     - tinycss2
 
 test:

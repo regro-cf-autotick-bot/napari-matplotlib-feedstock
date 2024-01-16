@@ -1,13 +1,13 @@
 {% set name = "napari-matplotlib" %}
-{% set version = "1.2.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari_matplotlib-{{ version }}.tar.gz
-  sha256: 594feadbf0b0cd712baa853d2a7074e21887f6e17889a2aab4ad86b9ed32b815
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ee3fde3682e4eb9aeff1f9eb17dd0fece958e3b55b3993ec66761a02453969fb
 
 build:
   noarch: python

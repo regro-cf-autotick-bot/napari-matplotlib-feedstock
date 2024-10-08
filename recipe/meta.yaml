@@ -21,7 +21,7 @@ requirements:
     - setuptools-scm
   run:
     - matplotlib-base
-    - napari <0.5
+    - napari >=0.5
     - numpy
     - python >=3.9
     - qtpy

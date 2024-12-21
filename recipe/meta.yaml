@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 25326720c5ae2e3194a8fd4e77332d7902b5efd8b6219e9e7c8f943f07bce281
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - matplotlib-base
     - napari >=0.5
     - numpy
-    - python >=3.9
+    - python >={{ python_min }}
     - qtpy
     - tinycss2
 
@@ -37,6 +37,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://github.com/matplotlib/napari-matplotlib
